@@ -4,8 +4,9 @@ const qs = require('qs');
 const port = 3000
 
 app.get('/', (req, res) => {
-	console.log({ query: req.query })
-	console.log({ qs: qs.parse(req.query )});
+	console.log(req.url);
+	console.log('query:', JSON.stringify(req.query, null, '  ') )
+	console.log('qs:', JSON.stringify(qs.parse(req.query ), null, '  '));
 	res.send('ran test')
 })
 
