@@ -11,15 +11,6 @@ const testObj = {
 
 axios.get('http://localhost:3000', {
 	params: {
-		testObj: {
-			case: 'destructuring',
-			...testObj
-		}
-	},
-});
-
-axios.get('http://localhost:3000', {
-	params: {
 		// attach object
 		case: 'attach object',
 		testObj
